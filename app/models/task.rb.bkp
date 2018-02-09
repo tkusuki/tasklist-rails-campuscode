@@ -1,0 +1,9 @@
+class Task
+
+  attr_accessor :description, :done
+  
+  def initialize(description, done = false)
+    @description = description
+    @done = done
+  end
+end

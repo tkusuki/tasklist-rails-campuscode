@@ -1,8 +1,20 @@
 <h1>Bem-vindo ao Task List</h1>
 <h2>Tarefas cadastradas</h2>
 
-<ol>
+<table border="1" width="300px">
+  <tr>
+    <th>Tarefa</th>
+    <th>Feita?</th>
+  </tr>
   <% @tarefas.each do |tarefa| %>
-  <li><%=tarefa%></li>
+    <tr> <%= tarefa.done %>
+      <td><%= tarefa.description %></td>
+      <td><%= tarefa.done %></td>
+    </tr>
   <% end %>
-</ol>
+</table>
+<p>
+  <a href="tasks/new">Cadastrar uma tarefa</a>
+</p>
+
+<!--  Links para exibir a tarefa e o status (tasks#show) -->

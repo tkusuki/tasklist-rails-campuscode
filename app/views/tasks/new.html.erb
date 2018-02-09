@@ -1,0 +1,11 @@
+<h1>Cadastrar tarefa</h1>
+<!-- <form method="POST" action="/tasks">
+  <input type="text" name="description">
+  <input type="submit" value="Enviar">
+</form> -->
+
+<%= form_for(Task.new) do |f| %>
+<%= f.label :description, 'Descrição'%>
+<%= f.text_field :description %>
+<%= f.submit 'Enviar' %>
+<% end %>
